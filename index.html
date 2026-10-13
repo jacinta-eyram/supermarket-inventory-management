@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermarket Inventory Management</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Supermarket Inventory Management</h1>
+        <h2>Search Product</h2>
+        <input type="text" id="searchName" placeholder="Enter product name">
+        <button onclick="searchProduct()">Search</button>
+        <button onclick="displayProducts()">Show All</button>
+
+        <h2>Product Inventory</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price (GH₵)</th>
+                    <th>Quantity</th>
+                    <th>Stock Value (GH₵)</th>
+                </tr>
+            </thead>
+            <tbody id="productTable"></tbody>
+        </table>
+
+        <div class="summary">
+            <h2>Inventory Summary</h2>
+            <p>Total Products: <span id="totalProducts">10</span></p>
+            <p>Total Units: <span id="totalUnits">0</span></p>
+            <p>Total Inventory Value: GH₵ <span id="totalValue">0.00</span></p>
+        </div>
+
+        <h2>Add Stock</h2>
+        <input type="text" id="stockName" placeholder="Enter product name">
+        <input type="number" id="stockAmount" placeholder="Quantity to add" min="1" step="1">
+        <button onclick="addStock()">Add Stock</button>
+        <p id="message"></p>
+    </div>
+</body>
+</html>
